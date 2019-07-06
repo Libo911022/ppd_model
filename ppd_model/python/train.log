@@ -1,0 +1,1389 @@
+INFO:tensorflow:Total used feature class: 184
+INFO:tensorflow:Total used cross feature class: 18
+INFO:tensorflow:Build total 46 wide columns
+INFO:tensorflow:Build total 202 deep columns
+INFO:tensorflow:Wide input dimension is: 47809
+INFO:tensorflow:Deep input dimension is: 318
+INFO:tensorflow:Using config: {'_model_dir': '../model/wide_deep', '_tf_random_seed': 2019, '_save_summary_steps': 1000, '_save_checkpoints_steps': None, '_save_checkpoints_secs': 1800, '_session_config': None, '_keep_checkpoint_max': 5, '_keep_checkpoint_every_n_hours': 1, '_log_step_count_steps': 1000, '_service': None, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7f9cb9e52b38>, '_task_type': 'worker', '_task_id': 0, '_global_id_in_cluster': 0, '_master': '', '_evaluation_master': '', '_is_chief': True, '_num_ps_replicas': 0, '_num_worker_replicas': 1}
+INFO:tensorflow:Build estimator: <lib.joint.WideAndDeepClassifier object at 0x7f9cb0dd8e48>
+INFO:tensorflow:Running training and evaluation locally (non-distributed).
+INFO:tensorflow:Start train and evaluate loop. The evaluate will happen after 600 secs (eval_spec.throttle_secs) or training is finished.
+INFO:tensorflow:Parsing input csv files: ['../train/train_data.csv']
+WARNING:tensorflow:From /home/paperspace/ppd/ppd_model/python/lib/dataset.py:161: TextLineDataset.__init__ (from tensorflow.contrib.data.python.ops.readers) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.TextLineDataset`.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2019-06-28 12:02:20.906197: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:898] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-06-28 12:02:20.906469: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1212] Found device 0 with properties: 
+name: Quadro P4000 major: 6 minor: 1 memoryClockRate(GHz): 1.48
+pciBusID: 0000:00:05.0
+totalMemory: 7.93GiB freeMemory: 7.84GiB
+2019-06-28 12:02:20.906490: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 12:02:21.209221: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 7573 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-1653
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+2019-06-28 12:02:52.688820: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:94] Filling up shuffle buffer (this may take a while): 8392 of 10000
+2019-06-28 12:02:54.517979: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:130] Shuffle buffer filled.
+INFO:tensorflow:Saving checkpoints for 1656 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:loss = 97369.77, step = 1656
+INFO:tensorflow:loss = 80875.945, step = 1956 (114.629 sec)
+INFO:tensorflow:loss = 96910.24, step = 2256 (101.336 sec)
+INFO:tensorflow:loss = 62641.44, step = 2556 (104.597 sec)
+INFO:tensorflow:global_step/sec: 2.8165
+INFO:tensorflow:loss = 62605.27, step = 2856 (110.404 sec)
+INFO:tensorflow:loss = 66911.29, step = 3156 (96.135 sec)
+INFO:tensorflow:Saving checkpoints for 3267 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:Loss for final step: 42415.273.
+INFO:tensorflow:Parsing input csv files: ['../eval/eval_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2019-06-28-16:12:33
+INFO:tensorflow:Graph was finalized.
+2019-06-28 12:12:33.917869: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 12:12:33.918021: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-3267
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2019-06-28-16:13:58
+INFO:tensorflow:Saving dict for global step 3267: accuracy = 0.25105548, average_loss = 132.66463, global_step = 3267, loss = 52354.16
+INFO:tensorflow:Parsing input csv files: ['../train/train_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2019-06-28 12:14:11.262635: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 12:14:11.262792: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-3267
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+2019-06-28 12:14:42.216534: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:94] Filling up shuffle buffer (this may take a while): 8702 of 10000
+2019-06-28 12:14:43.664865: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:130] Shuffle buffer filled.
+INFO:tensorflow:Saving checkpoints for 3270 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:loss = 57454.035, step = 3270
+INFO:tensorflow:loss = 60574.51, step = 3570 (111.837 sec)
+INFO:tensorflow:loss = 60166.535, step = 3870 (95.225 sec)
+INFO:tensorflow:loss = 89344.86, step = 4170 (97.132 sec)
+INFO:tensorflow:global_step/sec: 2.97207
+INFO:tensorflow:loss = 47214.957, step = 4470 (110.317 sec)
+INFO:tensorflow:loss = 55722.312, step = 4770 (99.059 sec)
+INFO:tensorflow:Saving checkpoints for 4920 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:Loss for final step: 76695.13.
+INFO:tensorflow:Parsing input csv files: ['../eval/eval_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2019-06-28-16:24:25
+INFO:tensorflow:Graph was finalized.
+2019-06-28 12:24:25.731902: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 12:24:25.732031: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-4920
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2019-06-28-16:26:00
+INFO:tensorflow:Saving dict for global step 4920: accuracy = 0.43205887, average_loss = 155.32112, global_step = 4920, loss = 61295.215
+INFO:tensorflow:Parsing input csv files: ['../train/train_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2019-06-28 12:26:11.928914: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 12:26:11.929078: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-4920
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+2019-06-28 12:26:44.635889: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:94] Filling up shuffle buffer (this may take a while): 7556 of 10000
+2019-06-28 12:26:47.820337: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:130] Shuffle buffer filled.
+INFO:tensorflow:Saving checkpoints for 4923 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:loss = 60888.555, step = 4923
+INFO:tensorflow:loss = 42011.74, step = 5223 (122.999 sec)
+INFO:tensorflow:loss = 38167.363, step = 5523 (103.430 sec)
+INFO:tensorflow:loss = 88328.8, step = 5823 (108.177 sec)
+INFO:tensorflow:global_step/sec: 2.69247
+INFO:tensorflow:loss = 46840.54, step = 6123 (120.437 sec)
+INFO:tensorflow:Saving checkpoints for 6417 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:Loss for final step: 34440.098.
+INFO:tensorflow:Parsing input csv files: ['../eval/eval_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2019-06-28-16:36:26
+INFO:tensorflow:Graph was finalized.
+2019-06-28 12:36:26.611318: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 12:36:26.611469: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-6417
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2019-06-28-16:37:57
+INFO:tensorflow:Saving dict for global step 6417: accuracy = 0.41515, average_loss = 119.475006, global_step = 6417, loss = 47149.07
+INFO:tensorflow:Parsing input csv files: ['../train/train_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2019-06-28 12:38:07.926194: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 12:38:07.926368: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-6417
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+2019-06-28 12:38:39.118002: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:94] Filling up shuffle buffer (this may take a while): 8833 of 10000
+2019-06-28 12:38:40.424291: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:130] Shuffle buffer filled.
+INFO:tensorflow:Saving checkpoints for 6420 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:loss = 46396.223, step = 6420
+INFO:tensorflow:loss = 57747.062, step = 6720 (112.050 sec)
+INFO:tensorflow:loss = 57681.246, step = 7020 (93.991 sec)
+INFO:tensorflow:loss = 61433.973, step = 7320 (95.847 sec)
+INFO:tensorflow:global_step/sec: 2.99178
+INFO:tensorflow:loss = 51164.15, step = 7620 (107.297 sec)
+INFO:tensorflow:loss = 59939.645, step = 7920 (96.833 sec)
+INFO:tensorflow:Saving checkpoints for 8103 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:Loss for final step: 50396.027.
+INFO:tensorflow:Parsing input csv files: ['../eval/eval_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2019-06-28-16:48:21
+INFO:tensorflow:Graph was finalized.
+2019-06-28 12:48:22.166762: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 12:48:22.166924: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-8103
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2019-06-28-16:49:48
+INFO:tensorflow:Saving dict for global step 8103: accuracy = 0.33933035, average_loss = 74.542725, global_step = 8103, loss = 29417.2
+INFO:tensorflow:Parsing input csv files: ['../train/train_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2019-06-28 12:50:00.036419: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 12:50:00.036570: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-8103
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+2019-06-28 12:50:31.244837: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:94] Filling up shuffle buffer (this may take a while): 8833 of 10000
+2019-06-28 12:50:32.556462: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:130] Shuffle buffer filled.
+INFO:tensorflow:Saving checkpoints for 8106 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:loss = 26005.451, step = 8106
+INFO:tensorflow:loss = 38291.914, step = 8406 (111.690 sec)
+INFO:tensorflow:loss = 63124.03, step = 8706 (96.998 sec)
+INFO:tensorflow:loss = 46181.51, step = 9006 (95.550 sec)
+INFO:tensorflow:global_step/sec: 2.97409
+INFO:tensorflow:loss = 33693.098, step = 9306 (106.883 sec)
+INFO:tensorflow:loss = 42269.246, step = 9606 (97.003 sec)
+INFO:tensorflow:Saving checkpoints for 9783 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:Loss for final step: 28719.693.
+INFO:tensorflow:Parsing input csv files: ['../eval/eval_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2019-06-28-17:00:14
+INFO:tensorflow:Graph was finalized.
+2019-06-28 13:00:14.814423: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 13:00:14.814576: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-9783
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2019-06-28-17:01:40
+INFO:tensorflow:Saving dict for global step 9783: accuracy = 0.35041198, average_loss = 71.417564, global_step = 9783, loss = 28183.9
+INFO:tensorflow:Parsing input csv files: ['../train/train_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2019-06-28 13:01:50.905076: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 13:01:50.905225: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-9783
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+2019-06-28 13:02:22.585367: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:94] Filling up shuffle buffer (this may take a while): 8592 of 10000
+2019-06-28 13:02:24.185520: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:130] Shuffle buffer filled.
+INFO:tensorflow:Saving checkpoints for 9786 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:loss = 27860.441, step = 9786
+INFO:tensorflow:loss = 31453.23, step = 10086 (112.327 sec)
+INFO:tensorflow:loss = 34166.938, step = 10386 (93.939 sec)
+INFO:tensorflow:loss = 35437.24, step = 10686 (95.786 sec)
+INFO:tensorflow:global_step/sec: 2.99416
+INFO:tensorflow:loss = 33077.824, step = 10986 (106.467 sec)
+INFO:tensorflow:loss = 36711.42, step = 11286 (97.015 sec)
+INFO:tensorflow:Saving checkpoints for 11463 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:Loss for final step: 36408.4.
+INFO:tensorflow:Parsing input csv files: ['../eval/eval_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2019-06-28-17:12:05
+INFO:tensorflow:Graph was finalized.
+2019-06-28 13:12:05.612793: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 13:12:05.612952: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-11463
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2019-06-28-17:13:31
+INFO:tensorflow:Saving dict for global step 11463: accuracy = 0.37939674, average_loss = 81.86159, global_step = 11463, loss = 32305.482
+INFO:tensorflow:Parsing input csv files: ['../train/train_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2019-06-28 13:13:42.445505: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 13:13:42.445680: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-11463
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+2019-06-28 13:14:15.054919: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:94] Filling up shuffle buffer (this may take a while): 7723 of 10000
+2019-06-28 13:14:17.989602: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:130] Shuffle buffer filled.
+INFO:tensorflow:Saving checkpoints for 11466 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:loss = 29438.945, step = 11466
+INFO:tensorflow:loss = 33793.375, step = 11766 (122.807 sec)
+INFO:tensorflow:loss = 36643.1, step = 12066 (103.048 sec)
+INFO:tensorflow:loss = 38132.133, step = 12366 (106.419 sec)
+INFO:tensorflow:global_step/sec: 2.71999
+INFO:tensorflow:loss = 44182.75, step = 12666 (117.131 sec)
+INFO:tensorflow:loss = 36112.496, step = 12966 (104.614 sec)
+INFO:tensorflow:Saving checkpoints for 12987 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:Loss for final step: 24797.092.
+INFO:tensorflow:Parsing input csv files: ['../eval/eval_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2019-06-28-17:23:57
+INFO:tensorflow:Graph was finalized.
+2019-06-28 13:23:57.807246: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 13:23:57.807406: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-12987
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2019-06-28-17:25:29
+INFO:tensorflow:Saving dict for global step 12987: accuracy = 0.44990996, average_loss = 59.678867, global_step = 12987, loss = 23551.395
+INFO:tensorflow:Parsing input csv files: ['../train/train_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2019-06-28 13:25:40.241787: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 13:25:40.241946: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-12987
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+2019-06-28 13:26:11.767979: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:94] Filling up shuffle buffer (this may take a while): 7996 of 10000
+2019-06-28 13:26:14.263792: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:130] Shuffle buffer filled.
+INFO:tensorflow:Saving checkpoints for 12990 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:loss = 24842.092, step = 12990
+INFO:tensorflow:loss = 24967.719, step = 13290 (120.061 sec)
+INFO:tensorflow:loss = 32738.766, step = 13590 (103.896 sec)
+INFO:tensorflow:loss = 44792.965, step = 13890 (105.992 sec)
+INFO:tensorflow:global_step/sec: 2.73299
+INFO:tensorflow:loss = 34253.176, step = 14190 (117.187 sec)
+INFO:tensorflow:loss = 24767.56, step = 14490 (97.228 sec)
+INFO:tensorflow:Saving checkpoints for 14547 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:Loss for final step: 31302.076.
+INFO:tensorflow:Parsing input csv files: ['../eval/eval_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2019-06-28-17:35:53
+INFO:tensorflow:Graph was finalized.
+2019-06-28 13:35:53.765158: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 13:35:53.765325: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-14547
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2019-06-28-17:37:18
+INFO:tensorflow:Saving dict for global step 14547: accuracy = 0.38522252, average_loss = 68.62219, global_step = 14547, loss = 27080.748
+INFO:tensorflow:Parsing input csv files: ['../train/train_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2019-06-28 13:37:29.358926: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 13:37:29.359076: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-14547
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+2019-06-28 13:38:00.521976: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:94] Filling up shuffle buffer (this may take a while): 8608 of 10000
+2019-06-28 13:38:02.107241: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:130] Shuffle buffer filled.
+INFO:tensorflow:Saving checkpoints for 14550 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:loss = 27294.762, step = 14550
+INFO:tensorflow:loss = 18079.592, step = 14850 (111.740 sec)
+INFO:tensorflow:loss = 31246.049, step = 15150 (95.323 sec)
+INFO:tensorflow:loss = 29836.756, step = 15450 (95.358 sec)
+INFO:tensorflow:global_step/sec: 2.99128
+INFO:tensorflow:loss = 36288.367, step = 15750 (107.641 sec)
+INFO:tensorflow:loss = 22295.086, step = 16049 (96.627 sec)
+INFO:tensorflow:Saving checkpoints for 16229 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:Loss for final step: 31682.973.
+INFO:tensorflow:Parsing input csv files: ['../eval/eval_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2019-06-28-17:47:42
+INFO:tensorflow:Graph was finalized.
+2019-06-28 13:47:43.062451: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 13:47:43.062600: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-16229
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2019-06-28-17:49:08
+INFO:tensorflow:Saving dict for global step 16229: accuracy = 0.43345708, average_loss = 57.772194, global_step = 16229, loss = 22798.955
+INFO:tensorflow:Parsing input csv files: ['../train/train_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2019-06-28 13:49:18.870404: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 13:49:18.870550: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-16229
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+2019-06-28 13:49:50.582039: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:94] Filling up shuffle buffer (this may take a while): 8176 of 10000
+2019-06-28 13:49:52.819919: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:130] Shuffle buffer filled.
+INFO:tensorflow:Saving checkpoints for 16232 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:loss = 23862.777, step = 16232
+INFO:tensorflow:loss = 19407.127, step = 16532 (112.274 sec)
+INFO:tensorflow:loss = 24223.387, step = 16832 (94.373 sec)
+INFO:tensorflow:loss = 32464.633, step = 17132 (95.950 sec)
+INFO:tensorflow:global_step/sec: 2.98753
+INFO:tensorflow:loss = 27155.252, step = 17432 (107.245 sec)
+INFO:tensorflow:loss = 26992.73, step = 17732 (96.730 sec)
+INFO:tensorflow:Saving checkpoints for 17906 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:Loss for final step: 22375.857.
+INFO:tensorflow:Parsing input csv files: ['../eval/eval_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2019-06-28-17:59:32
+INFO:tensorflow:Graph was finalized.
+2019-06-28 13:59:32.395465: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 13:59:32.395610: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-17906
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2019-06-28-18:00:57
+INFO:tensorflow:Saving dict for global step 17906: accuracy = 0.3937573, average_loss = 54.66785, global_step = 17906, loss = 21573.87
+INFO:tensorflow:Parsing input csv files: ['../train/train_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2019-06-28 14:01:07.977130: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 14:01:07.977272: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-17906
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+2019-06-28 14:01:39.202214: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:94] Filling up shuffle buffer (this may take a while): 8788 of 10000
+2019-06-28 14:01:40.561279: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:130] Shuffle buffer filled.
+INFO:tensorflow:Saving checkpoints for 17909 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:loss = 25001.13, step = 17909
+INFO:tensorflow:loss = 27237.902, step = 18209 (111.212 sec)
+INFO:tensorflow:loss = 20942.979, step = 18509 (94.167 sec)
+INFO:tensorflow:loss = 24727.275, step = 18809 (95.699 sec)
+INFO:tensorflow:global_step/sec: 3.00247
+INFO:tensorflow:loss = 19897.402, step = 19109 (106.532 sec)
+INFO:tensorflow:loss = 21345.95, step = 19408 (97.025 sec)
+INFO:tensorflow:Saving checkpoints for 19594 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:Loss for final step: 25880.326.
+INFO:tensorflow:Parsing input csv files: ['../eval/eval_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2019-06-28-18:11:22
+INFO:tensorflow:Graph was finalized.
+2019-06-28 14:11:22.539199: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 14:11:22.539372: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-19594
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2019-06-28-18:12:47
+INFO:tensorflow:Saving dict for global step 19594: accuracy = 0.43223175, average_loss = 62.823395, global_step = 19594, loss = 24792.338
+INFO:tensorflow:Parsing input csv files: ['../train/train_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2019-06-28 14:12:58.194691: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 14:12:58.194831: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-19594
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+2019-06-28 14:13:29.953329: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:94] Filling up shuffle buffer (this may take a while): 8807 of 10000
+2019-06-28 14:13:31.297483: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:130] Shuffle buffer filled.
+INFO:tensorflow:Saving checkpoints for 19597 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:loss = 25523.04, step = 19597
+INFO:tensorflow:loss = 23959.45, step = 19897 (110.903 sec)
+INFO:tensorflow:loss = 28069.771, step = 20197 (93.989 sec)
+INFO:tensorflow:loss = 26087.312, step = 20497 (95.824 sec)
+INFO:tensorflow:global_step/sec: 3.00521
+INFO:tensorflow:loss = 29959.994, step = 20797 (107.182 sec)
+INFO:tensorflow:loss = 21802.557, step = 21097 (96.413 sec)
+INFO:tensorflow:Saving checkpoints for 21283 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:Loss for final step: 26236.934.
+INFO:tensorflow:Parsing input csv files: ['../eval/eval_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2019-06-28-18:23:11
+INFO:tensorflow:Graph was finalized.
+2019-06-28 14:23:11.935770: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 14:23:11.935911: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-21283
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2019-06-28-18:24:36
+INFO:tensorflow:Saving dict for global step 21283: accuracy = 0.4168959, average_loss = 47.980495, global_step = 21283, loss = 18934.805
+INFO:tensorflow:Parsing input csv files: ['../train/train_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2019-06-28 14:24:47.861430: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 14:24:47.861577: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-21283
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+2019-06-28 14:25:18.994727: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:94] Filling up shuffle buffer (this may take a while): 8865 of 10000
+2019-06-28 14:25:20.274583: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:130] Shuffle buffer filled.
+INFO:tensorflow:Saving checkpoints for 21286 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:loss = 21522.611, step = 21286
+INFO:tensorflow:loss = 25310.78, step = 21586 (111.224 sec)
+INFO:tensorflow:loss = 22435.025, step = 21886 (93.752 sec)
+INFO:tensorflow:loss = 34620.46, step = 22186 (95.863 sec)
+INFO:tensorflow:global_step/sec: 3.00309
+INFO:tensorflow:loss = 28951.746, step = 22486 (106.945 sec)
+INFO:tensorflow:loss = 24559.822, step = 22786 (96.938 sec)
+INFO:tensorflow:Saving checkpoints for 22972 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:Loss for final step: 24062.102.
+INFO:tensorflow:Parsing input csv files: ['../eval/eval_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2019-06-28-18:35:01
+INFO:tensorflow:Graph was finalized.
+2019-06-28 14:35:01.403230: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 14:35:01.403388: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-22972
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2019-06-28-18:36:26
+INFO:tensorflow:Saving dict for global step 22972: accuracy = 0.39853504, average_loss = 45.341137, global_step = 22972, loss = 17893.219
+INFO:tensorflow:Parsing input csv files: ['../train/train_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2019-06-28 14:36:37.079080: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 14:36:37.079284: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-22972
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+2019-06-28 14:37:08.827014: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:94] Filling up shuffle buffer (this may take a while): 8705 of 10000
+2019-06-28 14:37:10.275533: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:130] Shuffle buffer filled.
+INFO:tensorflow:Saving checkpoints for 22975 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:loss = 15983.428, step = 22975
+INFO:tensorflow:loss = 19763.932, step = 23275 (111.530 sec)
+INFO:tensorflow:loss = 21410.414, step = 23575 (99.384 sec)
+INFO:tensorflow:loss = 19127.467, step = 23875 (105.298 sec)
+INFO:tensorflow:global_step/sec: 2.85245
+INFO:tensorflow:loss = 20790.19, step = 24175 (121.320 sec)
+INFO:tensorflow:loss = 26946.191, step = 24475 (118.915 sec)
+INFO:tensorflow:Saving checkpoints for 24496 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:Loss for final step: 22733.941.
+INFO:tensorflow:Parsing input csv files: ['../eval/eval_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2019-06-28-18:46:53
+INFO:tensorflow:Graph was finalized.
+2019-06-28 14:46:53.426882: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 14:46:53.427026: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-24496
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2019-06-28-18:48:32
+INFO:tensorflow:Saving dict for global step 24496: accuracy = 0.4386104, average_loss = 44.14054, global_step = 24496, loss = 17419.422
+INFO:tensorflow:Parsing input csv files: ['../train/train_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2019-06-28 14:48:45.035052: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 14:48:45.035262: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-24496
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+2019-06-28 14:49:18.991304: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:94] Filling up shuffle buffer (this may take a while): 7355 of 10000
+2019-06-28 14:49:22.568748: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:130] Shuffle buffer filled.
+INFO:tensorflow:Saving checkpoints for 24499 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:loss = 18932.3, step = 24499
+INFO:tensorflow:loss = 21641.172, step = 24799 (132.813 sec)
+INFO:tensorflow:loss = 16102.218, step = 25099 (106.698 sec)
+INFO:tensorflow:loss = 17136.504, step = 25399 (111.868 sec)
+INFO:tensorflow:global_step/sec: 2.56409
+INFO:tensorflow:loss = 29647.621, step = 25699 (128.553 sec)
+INFO:tensorflow:Saving checkpoints for 25897 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:Loss for final step: 25037.889.
+INFO:tensorflow:Parsing input csv files: ['../eval/eval_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2019-06-28-18:59:01
+INFO:tensorflow:Graph was finalized.
+2019-06-28 14:59:01.611631: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 14:59:01.611800: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-25897
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2019-06-28-19:00:43
+INFO:tensorflow:Saving dict for global step 25897: accuracy = 0.37264267, average_loss = 54.89003, global_step = 25897, loss = 21661.55
+INFO:tensorflow:Parsing input csv files: ['../train/train_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2019-06-28 15:00:55.360129: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 15:00:55.360277: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-25897
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+2019-06-28 15:01:29.924575: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:94] Filling up shuffle buffer (this may take a while): 7350 of 10000
+2019-06-28 15:01:33.487004: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:130] Shuffle buffer filled.
+INFO:tensorflow:Saving checkpoints for 25900 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:loss = 21208.17, step = 25900
+INFO:tensorflow:loss = 15664.025, step = 26200 (129.367 sec)
+INFO:tensorflow:loss = 26833.27, step = 26500 (123.119 sec)
+INFO:tensorflow:loss = 37611.383, step = 26800 (133.649 sec)
+INFO:tensorflow:global_step/sec: 2.32702
+INFO:tensorflow:loss = 21740.516, step = 27100 (142.096 sec)
+INFO:tensorflow:Saving checkpoints for 27172 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:Loss for final step: 29744.596.
+INFO:tensorflow:Parsing input csv files: ['../eval/eval_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2019-06-28-19:11:12
+INFO:tensorflow:Graph was finalized.
+2019-06-28 15:11:12.640551: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 15:11:12.640700: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-27172
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2019-06-28-19:12:57
+INFO:tensorflow:Saving dict for global step 27172: accuracy = 0.3599594, average_loss = 61.615597, global_step = 27172, loss = 24315.697
+INFO:tensorflow:Parsing input csv files: ['../train/train_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2019-06-28 15:13:09.824578: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 15:13:09.824736: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-27172
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+2019-06-28 15:13:43.496365: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:94] Filling up shuffle buffer (this may take a while): 7523 of 10000
+2019-06-28 15:13:46.769227: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:130] Shuffle buffer filled.
+INFO:tensorflow:Saving checkpoints for 27175 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:loss = 27648.473, step = 27175
+INFO:tensorflow:loss = 11848.633, step = 27475 (129.367 sec)
+INFO:tensorflow:loss = 17344.297, step = 27775 (112.692 sec)
+INFO:tensorflow:loss = 21845.494, step = 28075 (115.518 sec)
+INFO:tensorflow:global_step/sec: 2.53195
+INFO:tensorflow:loss = 16373.854, step = 28375 (122.512 sec)
+INFO:tensorflow:Saving checkpoints for 28590 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:Loss for final step: 19672.201.
+INFO:tensorflow:Parsing input csv files: ['../eval/eval_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2019-06-28-19:23:25
+INFO:tensorflow:Graph was finalized.
+2019-06-28 15:23:25.545054: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 15:23:25.545270: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-28590
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2019-06-28-19:25:04
+INFO:tensorflow:Saving dict for global step 28590: accuracy = 0.3590689, average_loss = 49.960323, global_step = 28590, loss = 19716.113
+INFO:tensorflow:Parsing input csv files: ['../train/train_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2019-06-28 15:25:17.089578: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 15:25:17.089752: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-28590
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+2019-06-28 15:25:50.939933: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:94] Filling up shuffle buffer (this may take a while): 7758 of 10000
+2019-06-28 15:25:53.803205: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:130] Shuffle buffer filled.
+INFO:tensorflow:Saving checkpoints for 28593 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:loss = 17146.404, step = 28593
+INFO:tensorflow:loss = 18952.006, step = 28893 (123.156 sec)
+INFO:tensorflow:loss = 14383.577, step = 29193 (106.685 sec)
+INFO:tensorflow:loss = 20337.516, step = 29493 (109.977 sec)
+INFO:tensorflow:global_step/sec: 2.65263
+INFO:tensorflow:loss = 24782.832, step = 29793 (123.037 sec)
+INFO:tensorflow:Saving checkpoints for 30057 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:Loss for final step: 17297.574.
+INFO:tensorflow:Parsing input csv files: ['../eval/eval_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2019-06-28-19:35:31
+INFO:tensorflow:Graph was finalized.
+2019-06-28 15:35:32.104270: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 15:35:32.104429: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-30057
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2019-06-28-19:37:02
+INFO:tensorflow:Saving dict for global step 30057: accuracy = 0.46139508, average_loss = 56.021294, global_step = 30057, loss = 22107.988
+INFO:tensorflow:Parsing input csv files: ['../train/train_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2019-06-28 15:37:14.002135: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 15:37:14.002311: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-30057
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+2019-06-28 15:37:46.720312: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:94] Filling up shuffle buffer (this may take a while): 8240 of 10000
+2019-06-28 15:37:48.835357: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:130] Shuffle buffer filled.
+INFO:tensorflow:Saving checkpoints for 30060 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:loss = 18676.576, step = 30060
+INFO:tensorflow:loss = 26546.117, step = 30360 (120.297 sec)
+INFO:tensorflow:loss = 14231.758, step = 30660 (103.227 sec)
+INFO:tensorflow:loss = 27943.338, step = 30960 (105.314 sec)
+INFO:tensorflow:global_step/sec: 2.7434
+INFO:tensorflow:loss = 19191.156, step = 31260 (118.341 sec)
+INFO:tensorflow:loss = 15690.996, step = 31560 (107.253 sec)
+INFO:tensorflow:Saving checkpoints for 31581 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:Loss for final step: 17304.445.
+INFO:tensorflow:Parsing input csv files: ['../eval/eval_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2019-06-28-19:47:27
+INFO:tensorflow:Graph was finalized.
+2019-06-28 15:47:28.019525: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 15:47:28.019678: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-31581
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2019-06-28-19:48:58
+INFO:tensorflow:Saving dict for global step 31581: accuracy = 0.44576085, average_loss = 46.293285, global_step = 31581, loss = 18268.97
+INFO:tensorflow:Parsing input csv files: ['../train/train_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2019-06-28 15:49:10.169982: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 15:49:10.170132: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-31581
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+2019-06-28 15:49:42.325818: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:94] Filling up shuffle buffer (this may take a while): 8172 of 10000
+2019-06-28 15:49:44.542053: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:130] Shuffle buffer filled.
+INFO:tensorflow:Saving checkpoints for 31584 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:loss = 18417.848, step = 31584
+INFO:tensorflow:loss = 12854.352, step = 31884 (119.894 sec)
+INFO:tensorflow:loss = 17823.523, step = 32183 (105.975 sec)
+INFO:tensorflow:loss = 17768.883, step = 32483 (110.400 sec)
+INFO:tensorflow:global_step/sec: 2.59306
+INFO:tensorflow:loss = 17980.766, step = 32783 (122.547 sec)
+INFO:tensorflow:Saving checkpoints for 33059 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:Loss for final step: 17122.688.
+INFO:tensorflow:Parsing input csv files: ['../eval/eval_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2019-06-28-19:59:25
+INFO:tensorflow:Graph was finalized.
+2019-06-28 15:59:25.329293: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 15:59:25.329445: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-33059
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2019-06-28-20:01:00
+INFO:tensorflow:Saving dict for global step 33059: accuracy = 0.40983975, average_loss = 44.566357, global_step = 33059, loss = 17587.463
+INFO:tensorflow:Parsing input csv files: ['../train/train_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2019-06-28 16:01:12.613469: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 16:01:12.613625: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-33059
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+2019-06-28 16:01:45.563560: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:94] Filling up shuffle buffer (this may take a while): 7749 of 10000
+2019-06-28 16:01:48.547448: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:130] Shuffle buffer filled.
+INFO:tensorflow:Saving checkpoints for 33062 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:loss = 21920.248, step = 33062
+INFO:tensorflow:loss = 20675.898, step = 33362 (126.799 sec)
+INFO:tensorflow:loss = 21355.738, step = 33662 (110.585 sec)
+INFO:tensorflow:loss = 23721.756, step = 33962 (114.558 sec)
+INFO:tensorflow:global_step/sec: 2.48249
+INFO:tensorflow:loss = 24816.83, step = 34261 (127.782 sec)
+INFO:tensorflow:Saving checkpoints for 34468 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:Loss for final step: 14536.91.
+INFO:tensorflow:Parsing input csv files: ['../eval/eval_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2019-06-28-20:11:27
+INFO:tensorflow:Graph was finalized.
+2019-06-28 16:11:28.218507: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 16:11:28.218660: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-34468
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2019-06-28-20:13:07
+INFO:tensorflow:Saving dict for global step 34468: accuracy = 0.45794943, average_loss = 39.290268, global_step = 34468, loss = 15505.331
+INFO:tensorflow:Parsing input csv files: ['../train/train_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2019-06-28 16:13:19.276282: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 16:13:19.276435: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-34468
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+2019-06-28 16:13:52.863503: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:94] Filling up shuffle buffer (this may take a while): 7239 of 10000
+2019-06-28 16:13:56.560750: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:130] Shuffle buffer filled.
+INFO:tensorflow:Saving checkpoints for 34471 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:loss = 16808.023, step = 34471
+INFO:tensorflow:loss = 10882.733, step = 34771 (118.780 sec)
+INFO:tensorflow:loss = 17315.86, step = 35070 (96.277 sec)
+INFO:tensorflow:loss = 18748.582, step = 35370 (97.455 sec)
+INFO:tensorflow:global_step/sec: 2.80429
+INFO:tensorflow:loss = 16897.652, step = 35670 (109.564 sec)
+INFO:tensorflow:loss = 14078.312, step = 35970 (98.934 sec)
+INFO:tensorflow:Saving checkpoints for 36087 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:Loss for final step: 22091.902.
+INFO:tensorflow:Parsing input csv files: ['../eval/eval_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2019-06-28-20:23:33
+INFO:tensorflow:Graph was finalized.
+2019-06-28 16:23:33.834756: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 16:23:33.834908: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-36087
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2019-06-28-20:25:00
+INFO:tensorflow:Saving dict for global step 36087: accuracy = 0.4168218, average_loss = 46.57511, global_step = 36087, loss = 18380.19
+INFO:tensorflow:Parsing input csv files: ['../train/train_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2019-06-28 16:25:11.113538: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 16:25:11.113714: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-36087
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+2019-06-28 16:25:42.607998: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:94] Filling up shuffle buffer (this may take a while): 8644 of 10000
+2019-06-28 16:25:44.149162: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:130] Shuffle buffer filled.
+INFO:tensorflow:Saving checkpoints for 36090 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:loss = 20822.113, step = 36090
+INFO:tensorflow:loss = 18001.05, step = 36390 (113.942 sec)
+INFO:tensorflow:loss = 18452.621, step = 36690 (95.717 sec)
+INFO:tensorflow:loss = 20425.586, step = 36990 (97.872 sec)
+INFO:tensorflow:global_step/sec: 2.93841
+INFO:tensorflow:loss = 25009.982, step = 37290 (109.553 sec)
+INFO:tensorflow:loss = 16006.154, step = 37590 (98.672 sec)
+INFO:tensorflow:Saving checkpoints for 37737 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:Loss for final step: 13569.252.
+INFO:tensorflow:Parsing input csv files: ['../eval/eval_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2019-06-28-20:35:25
+INFO:tensorflow:Graph was finalized.
+2019-06-28 16:35:25.795549: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 16:35:25.795691: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-37737
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2019-06-28-20:36:52
+INFO:tensorflow:Saving dict for global step 37737: accuracy = 0.42042932, average_loss = 34.735786, global_step = 37737, loss = 13707.973
+INFO:tensorflow:Parsing input csv files: ['../train/train_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2019-06-28 16:37:03.933255: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 16:37:03.933415: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-37737
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+2019-06-28 16:37:35.713967: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:94] Filling up shuffle buffer (this may take a while): 8510 of 10000
+2019-06-28 16:37:37.415770: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:130] Shuffle buffer filled.
+INFO:tensorflow:Saving checkpoints for 37740 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:loss = 13329.102, step = 37740
+INFO:tensorflow:loss = 14697.541, step = 38040 (113.745 sec)
+INFO:tensorflow:loss = 17355.943, step = 38340 (96.391 sec)
+INFO:tensorflow:loss = 18458.816, step = 38640 (97.963 sec)
+INFO:tensorflow:global_step/sec: 2.93168
+INFO:tensorflow:loss = 13303.6, step = 38940 (110.112 sec)
+INFO:tensorflow:loss = 14171.215, step = 39240 (99.691 sec)
+INFO:tensorflow:Saving checkpoints for 39378 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:Loss for final step: 15859.855.
+INFO:tensorflow:Parsing input csv files: ['../eval/eval_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2019-06-28-20:47:17
+INFO:tensorflow:Graph was finalized.
+2019-06-28 16:47:18.066316: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 16:47:18.066454: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-39378
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2019-06-28-20:48:44
+INFO:tensorflow:Saving dict for global step 39378: accuracy = 0.42888626, average_loss = 33.32619, global_step = 39378, loss = 13151.696
+INFO:tensorflow:Parsing input csv files: ['../train/train_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2019-06-28 16:48:55.253232: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 16:48:55.253414: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-39378
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+2019-06-28 16:49:27.192090: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:94] Filling up shuffle buffer (this may take a while): 8491 of 10000
+2019-06-28 16:49:28.909750: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:130] Shuffle buffer filled.
+INFO:tensorflow:Saving checkpoints for 39381 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:loss = 12570.607, step = 39381
+INFO:tensorflow:loss = 9624.572, step = 39681 (113.345 sec)
+INFO:tensorflow:loss = 16539.117, step = 39981 (96.603 sec)
+INFO:tensorflow:loss = 15833.311, step = 40281 (97.885 sec)
+INFO:tensorflow:global_step/sec: 2.93454
+INFO:tensorflow:loss = 17796.38, step = 40581 (109.684 sec)
+INFO:tensorflow:loss = 20842.85, step = 40881 (99.121 sec)
+INFO:tensorflow:Saving checkpoints for 41022 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:Loss for final step: 14737.672.
+INFO:tensorflow:Parsing input csv files: ['../eval/eval_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2019-06-28-20:59:09
+INFO:tensorflow:Graph was finalized.
+2019-06-28 16:59:09.438220: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 16:59:09.438362: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-41022
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2019-06-28-21:00:35
+INFO:tensorflow:Saving dict for global step 41022: accuracy = 0.44380286, average_loss = 39.65921, global_step = 41022, loss = 15650.93
+INFO:tensorflow:Parsing input csv files: ['../train/train_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2019-06-28 17:00:46.979141: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 17:00:46.979297: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-41022
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+2019-06-28 17:01:18.667293: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:94] Filling up shuffle buffer (this may take a while): 8439 of 10000
+2019-06-28 17:01:20.449421: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:130] Shuffle buffer filled.
+INFO:tensorflow:Saving checkpoints for 41025 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:loss = 14016.604, step = 41025
+INFO:tensorflow:loss = 15940.473, step = 41325 (114.174 sec)
+INFO:tensorflow:loss = 14155.191, step = 41625 (96.069 sec)
+INFO:tensorflow:loss = 17604.695, step = 41925 (98.307 sec)
+INFO:tensorflow:global_step/sec: 2.92963
+INFO:tensorflow:loss = 20989.938, step = 42225 (109.923 sec)
+INFO:tensorflow:loss = 15562.102, step = 42525 (99.012 sec)
+INFO:tensorflow:Saving checkpoints for 42666 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:Loss for final step: 20606.945.
+INFO:tensorflow:Parsing input csv files: ['../eval/eval_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2019-06-28-21:11:01
+INFO:tensorflow:Graph was finalized.
+2019-06-28 17:11:01.860593: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 17:11:01.860761: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-42666
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2019-06-28-21:12:28
+INFO:tensorflow:Saving dict for global step 42666: accuracy = 0.4309969, average_loss = 54.41688, global_step = 42666, loss = 21474.83
+INFO:tensorflow:Parsing input csv files: ['../train/train_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2019-06-28 17:12:39.609855: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 17:12:39.610030: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-42666
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+2019-06-28 17:13:11.146314: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:94] Filling up shuffle buffer (this may take a while): 8538 of 10000
+2019-06-28 17:13:12.815371: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:130] Shuffle buffer filled.
+INFO:tensorflow:Saving checkpoints for 42669 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:loss = 26140.514, step = 42669
+INFO:tensorflow:loss = 21252.26, step = 42969 (113.841 sec)
+INFO:tensorflow:loss = 15100.113, step = 43269 (96.717 sec)
+INFO:tensorflow:loss = 17056.422, step = 43569 (98.505 sec)
+INFO:tensorflow:global_step/sec: 2.92497
+INFO:tensorflow:loss = 19380.2, step = 43869 (109.222 sec)
+INFO:tensorflow:loss = 10760.65, step = 44169 (99.298 sec)
+INFO:tensorflow:Saving checkpoints for 44310 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:Loss for final step: 20561.713.
+INFO:tensorflow:Parsing input csv files: ['../eval/eval_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2019-06-28-21:22:53
+INFO:tensorflow:Graph was finalized.
+2019-06-28 17:22:53.990087: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 17:22:53.990248: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-44310
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2019-06-28-21:24:24
+INFO:tensorflow:Saving dict for global step 44310: accuracy = 0.46312755, average_loss = 41.582733, global_step = 44310, loss = 16410.02
+INFO:tensorflow:Parsing input csv files: ['../train/train_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2019-06-28 17:24:35.408055: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 17:24:35.408230: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-44310
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+2019-06-28 17:25:07.556189: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:94] Filling up shuffle buffer (this may take a while): 8235 of 10000
+2019-06-28 17:25:09.729252: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:130] Shuffle buffer filled.
+INFO:tensorflow:Saving checkpoints for 44313 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:loss = 14747.457, step = 44313
+INFO:tensorflow:loss = 10601.423, step = 44613 (119.562 sec)
+INFO:tensorflow:loss = 8505.33, step = 44913 (102.302 sec)
+INFO:tensorflow:loss = 14715.655, step = 45213 (105.338 sec)
+INFO:tensorflow:global_step/sec: 2.75574
+INFO:tensorflow:loss = 13255.449, step = 45513 (117.350 sec)
+INFO:tensorflow:loss = 13655.817, step = 45813 (106.468 sec)
+INFO:tensorflow:Saving checkpoints for 45846 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:Loss for final step: 14502.25.
+INFO:tensorflow:Parsing input csv files: ['../eval/eval_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2019-06-28-21:34:49
+INFO:tensorflow:Graph was finalized.
+2019-06-28 17:34:49.971075: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 17:34:49.971288: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-45846
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2019-06-28-21:36:21
+INFO:tensorflow:Saving dict for global step 45846: accuracy = 0.38898876, average_loss = 35.372036, global_step = 45846, loss = 13959.059
+INFO:tensorflow:Parsing input csv files: ['../train/train_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2019-06-28 17:36:32.643357: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 17:36:32.643506: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-45846
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+2019-06-28 17:37:04.893798: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:94] Filling up shuffle buffer (this may take a while): 8156 of 10000
+2019-06-28 17:37:07.102579: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:130] Shuffle buffer filled.
+INFO:tensorflow:Saving checkpoints for 45849 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:loss = 13535.604, step = 45849
+INFO:tensorflow:loss = 15509.162, step = 46149 (120.205 sec)
+INFO:tensorflow:loss = 13176.274, step = 46449 (102.695 sec)
+INFO:tensorflow:loss = 13378.872, step = 46749 (105.627 sec)
+INFO:tensorflow:global_step/sec: 2.74858
+INFO:tensorflow:loss = 18266.695, step = 47049 (117.419 sec)
+INFO:tensorflow:loss = 17335.812, step = 47349 (106.948 sec)
+INFO:tensorflow:Saving checkpoints for 47375 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:Loss for final step: 21562.723.
+INFO:tensorflow:Parsing input csv files: ['../eval/eval_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2019-06-28-21:46:46
+INFO:tensorflow:Graph was finalized.
+2019-06-28 17:46:47.174603: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 17:46:47.174758: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-47375
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2019-06-28-21:48:17
+INFO:tensorflow:Saving dict for global step 47375: accuracy = 0.36070985, average_loss = 42.036774, global_step = 47375, loss = 16589.2
+INFO:tensorflow:Parsing input csv files: ['../train/train_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2019-06-28 17:48:28.877554: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 17:48:28.877730: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-47375
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+2019-06-28 17:49:00.942381: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:94] Filling up shuffle buffer (this may take a while): 8305 of 10000
+2019-06-28 17:49:03.015133: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:130] Shuffle buffer filled.
+INFO:tensorflow:Saving checkpoints for 47378 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:loss = 16644.988, step = 47378
+INFO:tensorflow:loss = 13994.504, step = 47678 (119.271 sec)
+INFO:tensorflow:loss = 13842.183, step = 47978 (103.213 sec)
+INFO:tensorflow:loss = 12829.388, step = 48278 (105.371 sec)
+INFO:tensorflow:global_step/sec: 2.75384
+INFO:tensorflow:loss = 13836.864, step = 48578 (117.941 sec)
+INFO:tensorflow:loss = 16258.491, step = 48878 (106.831 sec)
+INFO:tensorflow:Saving checkpoints for 48908 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:Loss for final step: 14596.273.
+INFO:tensorflow:Parsing input csv files: ['../eval/eval_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2019-06-28-21:58:43
+INFO:tensorflow:Graph was finalized.
+2019-06-28 17:58:43.806846: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 17:58:43.806992: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-48908
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2019-06-28-22:00:14
+INFO:tensorflow:Saving dict for global step 48908: accuracy = 0.44538528, average_loss = 41.18855, global_step = 48908, loss = 16254.461
+INFO:tensorflow:Parsing input csv files: ['../train/train_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2019-06-28 18:00:25.620825: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 18:00:25.621046: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-48908
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+2019-06-28 18:00:57.257549: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:94] Filling up shuffle buffer (this may take a while): 8064 of 10000
+2019-06-28 18:00:59.602484: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:130] Shuffle buffer filled.
+INFO:tensorflow:Saving checkpoints for 48911 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:loss = 15538.923, step = 48911
+INFO:tensorflow:loss = 11050.153, step = 49211 (119.786 sec)
+INFO:tensorflow:loss = 14918.093, step = 49511 (103.450 sec)
+INFO:tensorflow:loss = 17046.73, step = 49811 (105.558 sec)
+INFO:tensorflow:global_step/sec: 2.74683
+INFO:tensorflow:loss = 12146.055, step = 50111 (117.636 sec)
+INFO:tensorflow:loss = 10903.466, step = 50411 (106.585 sec)
+INFO:tensorflow:Saving checkpoints for 50438 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:Loss for final step: 17026.316.
+INFO:tensorflow:Parsing input csv files: ['../eval/eval_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2019-06-28-22:10:40
+INFO:tensorflow:Graph was finalized.
+2019-06-28 18:10:40.709445: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 18:10:40.709587: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-50438
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2019-06-28-22:12:23
+INFO:tensorflow:Saving dict for global step 50438: accuracy = 0.38616788, average_loss = 33.462177, global_step = 50438, loss = 13205.36
+INFO:tensorflow:Parsing input csv files: ['../train/train_data.csv']
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2019-06-28 18:12:35.308858: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-06-28 18:12:35.309064: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 141 MB memory) -> physical GPU (device: 0, name: Quadro P4000, pci bus id: 0000:00:05.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ../model/wide_deep/model.ckpt-50438
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+2019-06-28 18:13:09.174607: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:94] Filling up shuffle buffer (this may take a while): 7441 of 10000
+2019-06-28 18:13:12.624127: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:130] Shuffle buffer filled.
+INFO:tensorflow:Saving checkpoints for 50441 into ../model/wide_deep/model.ckpt.
+INFO:tensorflow:loss = 13960.726, step = 50441

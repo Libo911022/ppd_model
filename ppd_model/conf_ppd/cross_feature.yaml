@@ -1,0 +1,103 @@
+## Cross Feature Configuration
+
+# Using tf.feature_column.crossed_column API,
+# see https://www.tensorflow.org/api_docs/python/tf/feature_column/crossed_column
+# Transform: Hash(cartesian product of features) % hash_bucket_size
+
+# Q: How to chose `hash_bucket_size` ?
+# A: 1. if we know the total number of distinct value `N` of a cross feature,
+#       to avoid collision, set `hash_bucket_size` about 2*N.
+#    2. if we do not know,
+#       1) for small size category cross features, recommended `hash_bucket_size` to be production of each cross feature distinct value count.
+#          For example, cross feature {age, location}, age has n values, gender has m values,
+#       then hash_bucket_size can be set about n*m.
+#       2) for large size category cross features, consider high sparsity,
+#          recommended `hash_bucket_size` to be above rule divide 10~1000.
+
+# Conf Format Example
+# features:               # cross feature names, at least 2, separated by `&`
+#   hash_bucket_size:     # optional, if set empty, defaults 10(k), (unit is a thousand).
+#   is_deep:              # `0` or `1`, set `0` for only wide input, set `1` for embedding the cross feature for deep input
+                          # if set empty, defaults to `1`
+
+# Set unused features by using symbol `#` ahead of the lines.
+
+due_date_day&cell_province:
+  hash_bucket_size: 2
+  is_deep: 1
+
+due_date_day&id_province:
+  hash_bucket_size: 2
+  is_deep: 1
+
+age&gender:
+  hash_bucket_size: 0.05
+  is_deep: 1
+
+cell_province&age:
+  hash_bucket_size: .6
+  is_deep: 1
+
+id_province&age:
+  hash_bucket_size: .6
+  is_deep: 1
+
+id_city&age:
+  hash_bucket_size: 6
+  is_deep: 1
+
+max_interval&reg_interval:
+  hash_bucket_size: .25
+  is_deep: 1
+
+cell_change&age:
+  hash_bucket_size: 0.04
+  is_deep: 1
+
+tag_cnt&reg_interval:
+  hash_bucket_size: 0.08
+  is_deep: 1
+
+tag_cnt&max_interval:
+  hash_bucket_size: 0.15
+  is_deep: 1
+
+min_term_6m&min_term_12m&min_term_24m:
+  hash_bucket_size: 0.15
+  is_deep: 1
+
+min_rate_6m&min_rate_12m&min_rate_24m:
+  hash_bucket_size: 2
+  is_deep: 1
+
+max_term_6m&max_term_12m:
+  hash_bucket_size: 0.05
+  is_deep: 1
+
+max_rate_6m&max_rate_12m&max_rate_24m:
+  hash_bucket_size: 2
+  is_deep: 1
+
+due_date_weekday&first_prepay_days_max:
+  hash_bucket_size: 0.066
+  is_deep: 1
+
+due_date_weekday&first_prepay_days_mode:
+  hash_bucket_size: 0.066
+  is_deep: 1
+
+due_date_weekday&prepay_days_mode:
+  hash_bucket_size: 0.066
+  is_deep: 1
+
+due_date_weekday&prepay_days_max:
+  hash_bucket_size: 0.066
+  is_deep: 1
+
+max_continue_repay_times_once&first_prepay_days_mode:
+  hash_bucket_size: 0.2
+  is_deep: 1
+
+max_continue_repay_times_once&prepay_days_mode:
+  hash_bucket_size: 0.2
+  is_deep: 1
