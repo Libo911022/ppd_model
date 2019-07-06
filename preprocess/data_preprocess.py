@@ -376,8 +376,8 @@ def user_repay_features():
         pickle.dump(final,file)
 
 if __name__ == '__main__':
-#    user_info_features()
-#    user_taglist_features()
-#     user_behavior_features()
+   user_info_features()
+   user_taglist_features()
+   user_behavior_features()
    user_repay_features()
-#    listing_info_features()
+   listing_info_features()
